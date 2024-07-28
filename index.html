@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <div class="div__ingsal">
+        <!-- Entrada de texto -->
+        <section class="section__ingreso__txt">
+            <div class="entrada__texto">
+                <textarea class="txtareaing" id="IngresarTexto" placeholder="Introduce el texto" maxlength="500"></textarea>
+            </div>
+            <div class="alerta">
+                <img class="img__alert" src="assets/circulo-exclamacion.png" alt="circulo con exclamación"> 
+                <p class="ingresar__texto__parrafo">Sólo letras minúsculas y sin acentos</p> 
+            </div>
+            <div class="div__botones">
+                <button class="boton_encr" onclick="encryptText()">Encriptar</button>
+                <button class="boton_des" onclick="decryptText()">Desencriptar</button>
+            </div>
+        </section>
+        <!-- Salida de texto -->
+        <section class="section__salida__txt">
+            <div class="txt__salida">
+                <h2>No se encontró ningún mensaje</h2>
+                <p>Ingrese el texto que desee encriptar o desencriptar</p>
+            </div>
+            <div class="salida__texto">
+                <img class="imgsalida" src="assets/gato.png" alt="imagen de un gato" id="outputImage">
+                <textarea class="txtareasal" id="SalidaTexto" readonly placeholder="El texto encriptado o desencriptado aparecerá aquí"></textarea>
+                <button class="boton_cop" onclick="copyText()">Copiar</button>
+            </div>
+        </section>
+    </div>
+</main>      
+<footer class="footer">
+    <p>Desarrollado por Malvina - 2024</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
